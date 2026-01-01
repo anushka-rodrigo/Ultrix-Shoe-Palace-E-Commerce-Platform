@@ -1,0 +1,117 @@
+header {
+    background-image: url('imgs/logo.png'); /* Replace 'logo.png' with the actual path to your logo image */
+    background-size: contain; /* Adjust the background size as needed */
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #271d3b;
+    color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+
+#nav{
+    text-align: right;
+}
+
+#nav button{
+    background-color: lightblue;
+    border-color: #271d3b;
+    padding: 7px;
+    color: #271d3b;
+    border-radius: 15px;
+}
+
+#nav button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+    /* Add any styles or content for the main section of your page */
+}
+
+section {
+    margin: 50px 0;
+}
+
+footer {
+    background-color: #271d3b;
+    color: lightblue;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+a {
+    color: #271d3b;
+    text-decoration: none;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+
+
+/* New styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    header {
+        background-size: auto; /* Change background size for smaller screens */
+        text-align: left; /* Align text to the left */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust font size for h1 on smaller screens */
+    }
+
+    h2 {
+        font-size: 1em; /* Adjust font size for h2 on smaller screens */
+    }
+
+}
+
+section#about {
+    columns: 2; /* Specify the number of columns */
+    column-gap: 20px; /* Adjust the gap between columns */
+}
+
+section#about {
+    display: flex; /* Use flexbox for the two-column layout */
+}
+
+
+
+#about {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+#reviews {
+    columns: 3; /* Specify the number of columns */
+    column-gap: 20px; /* Adjust the gap between columns */
+    display: flex;
+    max-width: 100%;
+}
+
+#home {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+}
