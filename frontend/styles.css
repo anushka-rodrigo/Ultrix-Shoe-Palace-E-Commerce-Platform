@@ -1,11 +1,11 @@
 header {
-    background-image: url('imgs/logo.png'); /* Replace 'logo.png' with the actual path to your logo image */
+    background-image: url('imgs/shoePalaceLogo.png'); /* Replace 'logo.png' with the actual path to your logo image */
     background-size: contain; /* Adjust the background size as needed */
     background-repeat: no-repeat;
     background-position: left center;
     background-color: #271d3b;
     color: lightblue;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -32,11 +32,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: rgb(207, 237, 247);
 }
 
 main {
     padding: 20px;
-    background-color: #fff;
     color: #000;
     /* Add any styles or content for the main section of your page */
 }
@@ -77,7 +77,13 @@ a {
     h2 {
         font-size: 1em; /* Adjust font size for h2 on smaller screens */
     }
-
+    .about-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .about-images, .about-text {
+        flex: 1 1 100%;
+    }
 }
 
 section#about {
@@ -100,12 +106,7 @@ section#about {
     margin: 20px 0;
 }
 
-#reviews {
-    columns: 3; /* Specify the number of columns */
-    column-gap: 20px; /* Adjust the gap between columns */
-    display: flex;
-    max-width: 100%;
-}
+
 
 #home {
     padding: 20px;
@@ -114,4 +115,48 @@ section#about {
     border-radius: 10px;
     padding: 15px;
     margin: 20px 0;
+}
+
+/* Container with text on left, images on right */
+.about-container {
+    display: flex;
+    flex-wrap: wrap; /* stacks on smaller screens */
+    gap: 40px;
+    align-items: flex-start; /* align top of text and grid */
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left column: text */
+.about-text {
+    flex: 1 1 500px; /* grows/shrinks, min width 500px */
+}
+
+/* Right column: image grid */
+.about-images-grid {
+    flex: 1 1 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for now */
+    grid-template-rows: repeat(2, 1fr);    /* 2 rows for 4 images */
+    gap: 20px;
+    justify-items: center; /* center images in grid cells */
+    align-items: center;
+}
+
+/* General image styles */
+.about-images-grid img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;       /* crops nicely */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.about-images-grid img:hover {
+    transform: scale(1.1);
+    box-shadow: 
+        0 0 15px rgba(173, 216, 230, 0.8), /* light blue glow */
+        0 0 30px rgba(255, 255, 255, 0.6); /* soft white glow */
+
 }
