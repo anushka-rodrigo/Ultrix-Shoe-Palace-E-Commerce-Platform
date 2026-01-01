@@ -1,3 +1,4 @@
+/*common main styles*/
 header {
     background-image: url('imgs/shoePalaceLogo.png'); /* Replace 'logo.png' with the actual path to your logo image */
     background-size: contain; /* Adjust the background size as needed */
@@ -11,6 +12,7 @@ header {
 
 #nav{
     text-align: right;
+    gap: 5px;
 }
 
 #nav button{
@@ -21,6 +23,14 @@ header {
     border-radius: 15px;
 }
 
+h1 {
+    margin-left: 100px;
+}
+
+img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
 #nav button:hover{
     cursor: pointer;
     transform: scale(1.1);
@@ -37,7 +47,7 @@ body {
 
 main {
     padding: 20px;
-    color: #000;
+    color: #271d3b;
     /* Add any styles or content for the main section of your page */
 }
 
@@ -86,37 +96,76 @@ a {
     }
 }
 
-section#about {
-    columns: 2; /* Specify the number of columns */
-    column-gap: 20px; /* Adjust the gap between columns */
+/*home pg styles*/
+.category-imgs {
+    display: flex;            
+    justify-content: center;  
+    flex-wrap: wrap;
+    gap: 20px 30px;                
+    margin-top: 20px; 
 }
 
-section#about {
-    display: flex; /* Use flexbox for the two-column layout */
+.category-imgs img{
+    border: 3px solid #271d3b;
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px; /* space between image and caption */
+}
+
+.why-us-imgs {
+    display: flex;            
+    justify-content: center;  
+    align-items: flex-start;  /* align items from top so captions show below */
+    gap: 20px;                
+    margin-top: 20px; 
+}
+
+.img-caption {
+    display: flex;
+    flex-direction: column;  /* image on top, caption below */
+    align-items: center;     /* center caption under image */
+    text-align: center;
+}
+
+.category-imgs .img-caption span {
+    font-size: 20px;        /* increase font size */
+    font-weight: 600;       /* make text bold */
+    margin-top: 5px;        /* space between image and caption */
+    text-align: center;
 }
 
 
+.why-us-imgs img {
+    border: 3px solid #271d3b;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px; /* space between image and caption */
+}
 
-#about {
-    padding: 20px;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 20px 0;
+.img-caption span {
+    font-weight: 600;
+    font-size: 16px;
+    color: #271d3b;
+}
+
+.why-us-imgs .img-caption span {
+    font-size: 20px;        /* increase font size */
+    font-weight: 600;       /* make text bold */
+    margin-top: 5px;        /* space between image and caption */
+    text-align: center;
+}
+
+#pay{
+    object-fit: fill;        /* makes the image smaller inside the circle */
+    object-position: middle; 
 }
 
 
-
-#home {
-    padding: 20px;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 20px 0;
-}
-
+/*about pg styles*/
 /* Container with text on left, images on right */
 .about-container {
     display: flex;
@@ -131,6 +180,8 @@ section#about {
 /* Left column: text */
 .about-text {
     flex: 1 1 500px; /* grows/shrinks, min width 500px */
+    color: #271d3b;
+    font-size: 18px;
 }
 
 /* Right column: image grid */
@@ -154,9 +205,14 @@ section#about {
 }
 
 .about-images-grid img:hover {
-    transform: scale(1.1);
     box-shadow: 
         0 0 15px rgba(173, 216, 230, 0.8), /* light blue glow */
         0 0 30px rgba(255, 255, 255, 0.6); /* soft white glow */
 
 }
+
+
+
+
+
+
