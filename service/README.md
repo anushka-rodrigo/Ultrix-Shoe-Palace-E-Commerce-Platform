@@ -4,19 +4,19 @@ The backend of **Ultrix Shoe Palace** is a robust Spring Boot application that p
 
 ---
 
-## 🚀 Features
+## Features
 
-### 👤 Customer Features
+### Customer Features
 * **Product Discovery:** View the full catalog or individual product details.
 * **Cart Management:** Add, update, or remove items from a personal shopping cart.
 * **Checkout:** Seamlessly convert cart items into orders.
 
-### 🛠️ Admin Features
+### Admin Features
 * **Inventory Control:** Full CRUD (Create, Read, Update, Delete) operations for products.
 * **Stock Management:** Real-time updates to product details and inventory levels.
 * **Secure Access:** Restricted endpoints for administrative operations.
 
-### 💻 Technical Highlights
+### Technical Highlights
 * **RESTful Architecture:** Clean API design for easy frontend integration.
 * **Security:** Role-based access control (**CUSTOMER** vs **ADMIN**).
 * **Persistence:** MySQL database integration using Hibernate/JPA.
@@ -25,7 +25,7 @@ The backend of **Ultrix Shoe Palace** is a robust Spring Boot application that p
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Product Endpoints
 | Method | Endpoint | Description | Access |
@@ -59,7 +59,7 @@ The backend of **Ultrix Shoe Palace** is a robust Spring Boot application that p
 
 ---
 
-## 🔐 User Roles
+## User Roles
 
 ### Customer (CUS)
 * Browse and search products.
@@ -73,7 +73,7 @@ The backend of **Ultrix Shoe Palace** is a robust Spring Boot application that p
 
 ---
 
-## 🧪 Testing the Backend
+## Testing the Backend
 
 You can use tools like **Postman** or **Insomnia** to test the API.
 
@@ -96,7 +96,7 @@ You can use tools like **Postman** or **Insomnia** to test the API.
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 * JWT Authentication: Implementing stateless role-based security.
 * Admin Dashboard: Visual analytics for sales and inventory.
