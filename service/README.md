@@ -92,3 +92,17 @@ You can use tools like **Postman** or **Insomnia** to test the API.
   "imgURL": "[https://example.com/img/shoe.jpg](https://example.com/img/shoe.jpg)",
   "description": "Premium running shoe"
 }
+```
+
+---
+
+## 🔮 Future Enhancements
+
+* JWT Authentication: Implementing stateless role-based security.
+* Admin Dashboard: Visual analytics for sales and inventory.
+* Order History: Detailed logs for previous customer purchases.
+* Payment Integration: Connecting Stripe or PayPal for real transactions.
+
+---
+
+**Ultrix Shoe Palace** - Premium Footwear E-Commerce Platform
