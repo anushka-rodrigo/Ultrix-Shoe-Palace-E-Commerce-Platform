@@ -205,17 +205,6 @@ For issues or questions:
 3. Ensure database connections are active
 4. Review Spring Boot logs for backend errors
 
-## Assignment Requirements Met
-
-✅ Frontend created with HTML, CSS, and JavaScript
-✅ Product information displayed from Spring Boot API
-✅ Users can view available products
-✅ Cart operations (add, remove, update quantities)
-✅ Spring Boot backend with MySQL database
-✅ Entities, Repositories, Services, and Controllers implemented
-✅ CRUD operations through RESTful APIs
-✅ Frontend and backend interaction demonstrated
-
 ## Future Enhancements
 
 - Payment gateway integration
