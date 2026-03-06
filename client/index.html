@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrix Shoe Palace - Premium Footwear</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>ULTRIX</h1>
+                    <p>SHOE PALACE</p>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="products.html" class="nav-link">Shop</a>
+                    <a href="#" class="nav-link" id="cartLink">Cart <span class="cart-badge" id="cartCount">0</span></a>
+                    <a href="#" class="nav-link" id="authLink">Login</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">STEP INTO EXCELLENCE</h2>
+            <p class="hero-subtitle">Discover the finest collection of premium footwear</p>
+            <a href="products.html" class="btn btn-primary">Explore Collection</a>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="men">
+                    <div class="category-image">
+                        <div class="category-overlay">
+                            <h3>Men's</h3>
+                            <p>Premium styles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-category="woman">
+                    <div class="category-image">
+                        <div class="category-overlay">
+                            <h3>Women's</h3>
+                            <p>Elegant designs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-category="kids">
+                    <div class="category-image">
+                        <div class="category-overlay">
+                            <h3>Kids'</h3>
+                            <p>Fun & comfortable</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-category="sports">
+                    <div class="category-image">
+                        <div class="category-overlay">
+                            <h3>Sports</h3>
+                            <p>Performance wear</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-category="casual">
+                    <div class="category-image">
+                        <div class="category-overlay">
+                            <h3>Casual</h3>
+                            <p>Everyday comfort</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-category="formal">
+                    <div class="category-image">
+                        <div class="category-overlay">
+                            <h3>Formal</h3>
+                            <p>Sophisticated style</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-grid" id="featuredProducts">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ULTRIX SHOE PALACE</h3>
+                    <p>Premium footwear for every occasion</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Shop</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ultrix Shoe Palace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

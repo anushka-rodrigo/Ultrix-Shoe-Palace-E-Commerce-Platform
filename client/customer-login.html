@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login - Ultrix Shoe Palace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>ULTRIX</h1>
+                    <p>SHOE PALACE</p>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="products.html" class="nav-link">Shop</a>
+                    <a href="admin-login.html" class="nav-link">Admin Login</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="auth-page">
+        <div class="auth-container">
+            <div class="auth-card">
+                <h2>Customer Login</h2>
+                <p class="auth-subtitle">Sign in to your account</p>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <div class="error-message" id="errorMessage"></div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                </form>
+                
+                <p class="auth-switch">
+                    Don't have an account? 
+                    <a href="customer-signup.html">Sign up here</a>
+                </p>
+                
+                <p class="auth-switch">
+                    Are you an admin? 
+                    <a href="admin-login.html">Login here</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ULTRIX SHOE PALACE</h3>
+                    <p>Premium footwear for every occasion</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Shop</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ultrix Shoe Palace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/customer-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Ultrix Shoe Palace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header admin-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>ULTRIX</h1>
+                    <p>ADMIN PANEL</p>
+                </div>
+                <nav class="nav">
+                    <a href="admin-dashboard.html" class="nav-link active">Dashboard</a>
+                    <a href="index.html" class="nav-link">View Site</a>
+                    <a href="#" class="nav-link" id="logoutLink">Logout</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="admin-page">
+        <div class="container">
+            <div class="admin-welcome">
+                <h1>Welcome, <span id="adminName">Admin</span></h1>
+                <p>Manage your inventory and products</p>
+            </div>
+
+            <div class="admin-actions">
+                <button class="btn btn-primary" id="addProductBtn">
+                    <span>+</span> Add New Product
+                </button>
+            </div>
+
+            <div class="products-table-container">
+                <h2>Product Inventory</h2>
+                <div class="table-responsive">
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Brand</th>
+                                <th>Category</th>
+                                <th>Size</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody">
+                            <!-- Products will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add/Edit Product Modal -->
+    <div id="productFormModal" class="modal">
+        <div class="modal-content modal-form">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add New Product</h2>
+            
+            <form id="productForm">
+                <input type="hidden" id="productId">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productName">Product Name *</label>
+                        <input type="text" id="productName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productBrand">Brand *</label>
+                        <input type="text" id="productBrand" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productPrice">Price (Rs.) *</label>
+                        <input type="number" id="productPrice" step="0.01" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productSize">Size(EU) *</label>
+                        <input type="number" id="productSize" min="1" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productCategory">Category *</label>
+                        <select id="productCategory" required>
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="men">Men's</option>
+                            <option value="woman">Women's</option>
+                            <option value="kids">Kids'</option>
+                            <option value="sports">Sports</option>
+                            <option value="casual">Casual</option>
+                            <option value="formal">Formal</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productStock">Stock *</label>
+                        <input type="number" id="productStock" min="0" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productImageURL">Image URL *</label>
+                    <input type="text" id="productImageURL" required placeholder="imgs/imgName.imgExtension">
+                </div>
+                
+                <div class="form-group">
+                    <label for="productDescription">Description *</label>
+                    <textarea id="productDescription" rows="4" required></textarea>
+                </div>
+                
+                <div class="error-message" id="formErrorMessage"></div>
+                <div class="success-message" id="formSuccessMessage"></div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="saveBtn">Save Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content modal-small">
+            <h3>Confirm Deletion</h3>
+            <p>Are you sure you want to delete this product? This action cannot be undone.</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="cancelDeleteBtn">Cancel</button>
+                <button class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ULTRIX SHOE PALACE</h3>
+                    <p>Premium footwear for every occasion</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ultrix Shoe Palace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>
