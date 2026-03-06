@@ -1,26 +1,14 @@
-\# Ultrix Shoe Palace - Premium Footwear E-Commerce Platform
+# Ultrix Shoe Palace - Premium Footwear E-Commerce Platform
 
-
-
-\*\*Ultrix Shoe Palace\*\* is a complete e-commerce web application for premium footwear. The project consists of a \*\*Spring Boot backend\*\* with MySQL database and a \*\*responsive frontend\*\* built with HTML, CSS, and JavaScript. The platform allows customers to browse and purchase shoes while providing admins with full product management capabilities.
-
-
+Ultrix Shoe Palace is a complete e-commerce web application for premium footwear. The project consists of a **Spring Boot backend** with a MySQL database and a **responsive frontend** built with HTML, CSS, and JavaScript. The platform allows customers to browse and purchase shoes while providing admins with full product management capabilities.
 
 ---
 
+## Project Overview
 
-
-\## Project Overview
-
-
-
-\- \*\*Frontend\*\*: Modern, responsive interface with product browsing, cart management, and checkout features.
-
-\- \*\*Backend\*\*: Spring Boot RESTful API providing product, user, cart, and order management with role-based access control.
-
-\- \*\*Database\*\*: MySQL used to store all application data including products, users, carts, and orders.
-
-
+* **Frontend**: Modern, responsive interface with product browsing, cart management, and checkout features.
+* **Backend**: Spring Boot RESTful API providing product, user, cart, and order management with role-based access control.
+* **Database**: MySQL used to store all application data including products, users, carts, and orders.
 
 The frontend and backend work together to deliver a seamless shopping experience with secure customer and admin operations.
 
@@ -28,231 +16,121 @@ The frontend and backend work together to deliver a seamless shopping experience
 
 ---
 
+## Features
 
+### Customer Features
+* **Browse Products**: Filter by category (Men, Women, Kids, Sports, Casual, Formal).
+* **Product Details**: View high-quality images, descriptions, and pricing.
+* **Filtering**: Sort products by category, price, and name.
+* **Shopping Cart**: Add products, update quantities, or remove items.
+* **Secure Checkout**: Streamlined order placement system.
+* **User Accounts**: Full registration and login system.
 
-\## Features
+### Admin Features
+* **Secure Dashboard**: Dedicated admin login access.
+* **Inventory Management**: Full CRUD (Create, Read, Update, Delete) capabilities for products.
+* **Stock Tracking**: Manage inventory levels in real time via an organized table.
+* **Access Control**: Admins are restricted from shopping functions to ensure data integrity.
 
-
-
-\### Customer Features
-
-\- Browse products by category (Men, Women, Kids, Sports, Casual, Formal)
-
-\- View product details with images, descriptions, and pricing
-
-\- Filter and sort products by category, price, and name
-
-\- Add products to shopping cart
-
-\- Update cart quantities and remove items
-
-\- Secure checkout process with order placement
-
-\- User registration and login system
-
-
-
-\### Admin Features
-
-\- Secure admin login
-
-\- Complete product management (Add, Edit, Delete)
-
-\- View all products in organized inventory table
-
-\- Manage stock in real time
-
-\- Cannot access shopping cart or checkout
-
-
-
-\### Technical Features
-
-\- RESTful API integration between frontend and Spring Boot backend
-
-\- Role-based access control for customers and admins
-
-\- Hibernate/JPA for database operations
-
-\- Cross-Origin support for frontend-backend integration
-
-\- Responsive design for desktop and mobile
-
-\- Smooth animations and modern UI with a consistent color scheme
-
-
+### Technical Features
+* **RESTful API**: Clean integration between the frontend and Spring Boot services.
+* **Role-Based Access Control (RBAC)**: Distinct permissions for Customers and Admins.
+* **Hibernate/JPA**: Efficient database operations and mapping.
+* **Cross-Origin (CORS)**: Pre-configured support for frontend-backend communication.
+* **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
 
 ---
 
+## API Endpoints
 
+### Product Endpoints
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| GET | `/products/allProduct` | List all products |
+| GET | `/products/{id}` | Get product by ID |
+| POST | `/products/addProduct` | Add new product (Admin) |
+| PUT | `/products/updateProduct/{id}` | Update product details (Admin) |
+| DELETE | `/products/deleteProduct/{id}` | Delete product (Admin) |
 
-\## API Endpoints
+### User Endpoints
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| GET | `/users/allUsers` | List all users |
+| GET | `/users/{id}` | Get user by ID |
+| POST | `/users/addUser` | Register a new user |
 
+### Cart Endpoints
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| POST | `/cart/addToCart` | Add item to cart |
+| GET | `/cart/user/{userId}` | Get user's cart items |
+| PUT | `/cart/updateCart/{cartId}` | Update item quantity |
+| DELETE | `/cart/delete/{cartId}` | Remove cart item |
+| DELETE | `/cart/clear/{userId}` | Clear user's cart |
 
-
-\### Product Endpoints
-
-\- `GET /products/allProduct` – List all products
-
-\- `GET /products/{id}` – Get product by ID
-
-\- `POST /products/addProduct` – Add new product (Admin only)
-
-\- `PUT /products/updateProduct/{id}` – Update product details (Admin only)
-
-\- `DELETE /products/deleteProduct/{id}` – Delete product (Admin only)
-
-
-
-\### User Endpoints
-
-\- `GET /users/allUsers` – List all users
-
-\- `GET /users/{id}` – Get user by ID
-
-\- `POST /users/addUser` – Register a new user
-
-
-
-\### Cart Endpoints
-
-\- `POST /cart/addToCart` – Add item to cart
-
-\- `GET /cart/user/{userId}` – Get user's cart items
-
-\- `PUT /cart/updateCart/{cartId}` – Update cart item quantity
-
-\- `DELETE /cart/delete/{cartId}` – Remove cart item
-
-\- `DELETE /cart/clear/{userId}` – Clear user's cart
-
-
-
-\### Order Endpoints
-
-\- `POST /orders/checkout/{userId}` – Place order
-
-
+### Order Endpoints
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| POST | `/orders/checkout/{userId}` | Place order |
 
 ---
 
+## User Roles
 
+### Customer (CUS)
+* Browse products and view details.
+* Manage personal shopping cart.
+* Place and view orders.
 
-\## User Roles
-
-
-
-\### Customer (CUS)
-
-\- Browse products
-
-\- Add/update/remove items in cart
-
-\- Place orders
-
-
-
-\### Admin (ADMIN)
-
-\- Manage products (CRUD)
-
-\- View inventory
-
-\- Cannot access cart or checkout
-
-
+### Admin (ADMIN)
+* Manage entire product inventory.
+* Monitor stock levels.
+* Restricted from customer-side shopping features.
 
 ---
 
+## Color Scheme (Frontend)
 
-
-\## Color Scheme (Frontend)
-
-\- \*\*Primary Dark\*\*: #0A2647 (Headers, footers)
-
-\- \*\*Primary Blue\*\*: #144272
-
-\- \*\*Light Blue\*\*: #E8F1F5 (Body background)
-
-\- \*\*Accent Blue\*\*: #2C74B3 (Buttons, highlights)
-
-\- \*\*Text Dark\*\*: #1A1A1A (Main text)
-
-
+The UI utilizes a professional blue-centric palette:
+* **Primary Dark**: `#0A2647` (Headers & Footers)
+* **Primary Blue**: `#144272` (Navigation Elements)
+* **Light Blue**: `#E8F1F5` (Main Background)
+* **Accent Blue**: `#2C74B3` (Buttons & Highlights)
+* **Text Dark**: `#1A1A1A` (Primary Typography)
 
 ---
 
+## Testing the Application
 
+### 1. Customer Flow
+* Browse products on the home page.
+* View product details.
+* Register/Login as a customer.
+* Add items to the cart and modify quantities.
+* Proceed to checkout to place an order.
 
-\## Testing the Application
+### 2. Admin Flow
+* Login with Admin credentials.
+* Access the product dashboard.
+* Perform Add, Edit, or Delete operations on the inventory.
 
-
-
-1\. \*\*Customer Flow\*\*
-
-&nbsp;  - Browse products on the home page
-
-&nbsp;  - View product details
-
-&nbsp;  - Login/register as a customer
-
-&nbsp;  - Add items to cart
-
-&nbsp;  - Update quantities or remove items
-
-&nbsp;  - Checkout and place an order
-
-
-
-2\. \*\*Admin Flow\*\*
-
-&nbsp;  - Login as admin
-
-&nbsp;  - View all products in the dashboard
-
-&nbsp;  - Add, edit, or delete products
-
-&nbsp;  - Manage inventory
-
-
-
-3\. \*\*API Testing\*\*
-
-&nbsp;  - Use \*\*Postman\*\* or \*\*Insomnia\*\* to test backend endpoints
-
-&nbsp;  - Example to add a product:
-
-
+### 3. API Testing
+Use **Postman** or **Insomnia** to test backend endpoints. Example payload to add a product:
 
 ```json
-
 POST /products/addProduct
-
 {
-
-&nbsp;   "name": "Ultrix Runner",
-
-&nbsp;   "brand": "Ultrix",
-
-&nbsp;   "price": 129.99,
-
-&nbsp;   "size": 42,
-
-&nbsp;   "cat": "men",
-
-&nbsp;   "stock": 50,
-
-&nbsp;   "imgURL": "https://example.com/img/shoe.jpg",
-
-&nbsp;   "description": "Premium running shoe"
-
+  "name": "Ultrix Runner",
+  "brand": "Ultrix",
+  "price": 129.99,
+  "size": 42,
+  "cat": "men",
+  "stock": 50,
+  "imgURL": "[https://example.com/img/shoe.jpg](https://example.com/img/shoe.jpg)",
+  "description": "Premium running shoe"
 }
-
-
+```
 
 ---
 
-
-
-\*\*Ultrix Shoe Palace\*\* - Premium Footwear E-Commerce Platform
-
+**Ultrix Shoe Palace** - Premium Footwear E-Commerce Platform
