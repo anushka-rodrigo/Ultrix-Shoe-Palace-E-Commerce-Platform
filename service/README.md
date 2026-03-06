@@ -1,200 +1,94 @@
-\# Ultrix Shoe Palace - Spring Boot Backend
+# Ultrix Shoe Palace - Spring Boot Backend
 
-
-
-The backend of \*\*Ultrix Shoe Palace\*\* is a Spring Boot application that powers the e-commerce platform for premium footwear. It provides RESTful APIs for managing products, users, carts, and orders, with role-based access control for customers and admins. The backend connects to a MySQL database to store all application data.
-
-
+The backend of **Ultrix Shoe Palace** is a robust Spring Boot application that powers a premium footwear e-commerce platform. It provides RESTful APIs for managing products, users, carts, and orders, featuring role-based access control for customers and administrators.
 
 ---
 
+## 🚀 Features
 
+### 👤 Customer Features
+* **Product Discovery:** View the full catalog or individual product details.
+* **Cart Management:** Add, update, or remove items from a personal shopping cart.
+* **Checkout:** Seamlessly convert cart items into orders.
 
-\## Features
+### 🛠️ Admin Features
+* **Inventory Control:** Full CRUD (Create, Read, Update, Delete) operations for products.
+* **Stock Management:** Real-time updates to product details and inventory levels.
+* **Secure Access:** Restricted endpoints for administrative operations.
 
-
-
-\### Customer Features
-
-\- View all products
-
-\- View individual product details
-
-\- Add items to cart
-
-\- Update cart items
-
-\- Remove items from cart
-
-\- Checkout to create orders
-
-
-
-\### Admin Features
-
-\- Full product management (CRUD)
-
-\- View all products in inventory
-
-\- Manage stock and product details
-
-\- Secure admin authentication
-
-
-
-\### Technical Features
-
-\- RESTful API endpoints for all operations
-
-\- Role-based access control (CUSTOMER and ADMIN)
-
-\- MySQL database integration
-
-\- Exception handling for invalid requests
-
-\- Cross-Origin support for frontend integration
-
-\- Hibernate/JPA for database operations
-
-
+### 💻 Technical Highlights
+* **RESTful Architecture:** Clean API design for easy frontend integration.
+* **Security:** Role-based access control (**CUSTOMER** vs **ADMIN**).
+* **Persistence:** MySQL database integration using Hibernate/JPA.
+* **Error Handling:** Global exception handling for invalid requests and edge cases.
+* **CORS Support:** Configured for seamless communication with modern frontend frameworks.
 
 ---
 
+## 📡 API Endpoints
 
+### Product Endpoints
+| Method | Endpoint | Description | Access |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/products/allProduct` | List all available products | Public |
+| `GET` | `/products/{id}` | Get specific product details | Public |
+| `POST` | `/products/addProduct` | Add a new product | Admin |
+| `PUT` | `/products/updateProduct/{id}` | Update product details | Admin |
+| `DELETE` | `/products/deleteProduct/{id}` | Remove a product | Admin |
 
-\## API Endpoints
+### User Endpoints
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `GET` | `/users/allUsers` | List all registered users |
+| `GET` | `/users/{id}` | Get user profile by ID |
+| `POST` | `/users/addUser` | Register a new user account |
 
+### Cart Endpoints
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `POST` | `/cart/addToCart` | Add a product to the cart |
+| `GET` | `/cart/user/{userId}` | Retrieve a user's current cart |
+| `PUT` | `/cart/updateCart/{cartId}` | Modify item quantity in cart |
+| `DELETE` | `/cart/delete/{cartId}` | Remove a specific item |
+| `DELETE` | `/cart/clear/{userId}` | Empty the entire cart |
 
-
-\### Product Endpoints
-
-\- `GET /products/allProduct` – List all products
-
-\- `GET /products/{id}` – Get product by ID
-
-\- `POST /products/addProduct` – Add a new product (Admin only)
-
-\- `PUT /products/updateProduct/{id}` – Update product details (Admin only)
-
-\- `DELETE /products/deleteProduct/{id}` – Delete product (Admin only)
-
-
-
-\### User Endpoints
-
-\- `GET /users/allUsers` – List all users
-
-\- `GET /users/{id}` – Get user by ID
-
-\- `POST /users/addUser` – Register a new user
-
-
-
-\### Cart Endpoints
-
-\- `POST /cart/addToCart` – Add product to cart
-
-\- `GET /cart/user/{userId}` – Get user's cart items
-
-\- `PUT /cart/updateCart/{cartId}` – Update quantity of a cart item
-
-\- `DELETE /cart/delete/{cartId}` – Remove item from cart
-
-\- `DELETE /cart/clear/{userId}` – Clear all cart items for a user
-
-
-
-\### Order Endpoints
-
-\- `POST /orders/checkout/{userId}` – Checkout and place an order
-
-
+### Order Endpoints
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `POST` | `/orders/checkout/{userId}` | Process checkout and create order |
 
 ---
 
+## 🔐 User Roles
 
+### Customer (CUS)
+* Browse and search products.
+* Manage personal shopping cart.
+* Place and finalize orders.
 
-\## User Roles
-
-
-
-\### Customer (CUS)
-
-\- Browse products
-
-\- Add/update/remove items in cart
-
-\- Place orders
-
-
-
-\### Admin (ADMIN)
-
-\- Manage products (CRUD)
-
-\- View inventory
-
-\- Cannot access cart or checkout
-
-
+### Admin (ADMIN)
+* Full Product Management (CRUD).
+* Inventory oversight.
+* *Note: Admins do not have access to cart or checkout functionalities.*
 
 ---
 
+## 🧪 Testing the Backend
 
+You can use tools like **Postman** or **Insomnia** to test the API.
 
-\## Testing the Backend
+### Example: Adding a Product
+**Endpoint:** `POST /products/addProduct`
 
-
-
-\- Use \*\*Postman\*\* or \*\*Insomnia\*\* to test API endpoints with JSON payloads.  
-
-\- Example: Add a product
-
-
-
+**Payload:**
 ```json
-
-POST /products/addProduct
-
 {
-
-&nbsp;   "name": "Ultrix Runner",
-
-&nbsp;   "brand": "Ultrix",
-
-&nbsp;   "price": 129.99,
-
-&nbsp;   "size": 42,
-
-&nbsp;   "cat": "men",
-
-&nbsp;   "stock": 50,
-
-&nbsp;   "imgURL": "https://example.com/img/shoe.jpg",
-
-&nbsp;   "description": "Premium running shoe"
-
+  "name": "Ultrix Runner",
+  "brand": "Ultrix",
+  "price": 129.99,
+  "size": 42,
+  "cat": "men",
+  "stock": 50,
+  "imgURL": "[https://example.com/img/shoe.jpg](https://example.com/img/shoe.jpg)",
+  "description": "Premium running shoe"
 }
-
-
-
-\## Future Enhancements
-
-
-
-\- Role-based JWT authentication
-
-\- Admin analytics dashboard
-
-\- Order history API
-
-\- Payment gateway integration
-
-
-
----
-
-
-
-\*\*Ultrix Shoe Palace\*\* - Premium Footwear E-Commerce Platform
-
