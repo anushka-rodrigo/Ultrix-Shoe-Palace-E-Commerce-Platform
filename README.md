@@ -1,5 +1,8 @@
 # Ultrix Shoe Palace - Premium Footwear E-Commerce Platform
 
+**Student Name:** M.A.O.Rodrigo  
+**University Index Number:** FC221019 
+
 Ultrix Shoe Palace is a complete e-commerce web application for premium footwear. The project consists of a **Spring Boot backend** with a MySQL database and a **responsive frontend** built with HTML, CSS, and JavaScript. The platform allows customers to browse and purchase shoes while providing admins with full product management capabilities.
 
 ---
@@ -122,7 +125,7 @@ POST /products/addProduct
 {
   "name": "Ultrix Runner",
   "brand": "Ultrix",
-  "price": 129.99,
+  "price": 5000.00,
   "size": 42,
   "cat": "men",
   "stock": 50,
