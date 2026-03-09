@@ -191,11 +191,11 @@ Product fields required:
 
 ### Database Schema
 The application expects the following entities:
-- Product (id, name, brand, price, size, cat, imgURL, stock, description)
-- User (id, name, email, password, role, phone, address)
-- Cart (id, user, product, quantity)
-- Order (id, user, total, orderDate)
-- OrderItems (id, order, product, quantity, price)
+- product_details (id, name, brand, price, size, cat, imgURL, stock, description)
+- user_details (id, name, email, password, role, phone, address)
+- shopping_cart (id, user, product, quantity)
+- orders (id, user, total, orderDate)
+- order_items (id, order, product, quantity, price)
 
 ## Support
 
