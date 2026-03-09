@@ -129,7 +129,7 @@ POST /products/addProduct
   "size": 42,
   "cat": "men",
   "stock": 50,
-  "imgURL": "[https://example.com/img/shoe.jpg](https://example.com/img/shoe.jpg)",
+  "imgURL": "imgs/imgName.imgExtension",
   "description": "Premium running shoe"
 }
 ```
